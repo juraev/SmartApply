@@ -1,0 +1,6 @@
+# FILEPATH: /Users/user/workspace/SmartApply/.gitignore
+
+# Python-specific ignore files
+*.pyc
+__pycache__/
+venv/

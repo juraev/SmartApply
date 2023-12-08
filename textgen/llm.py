@@ -76,13 +76,18 @@ class ChatGPT(LLMInterface):
 
 
 class Llama2(LLMInterface):
-    def __init__(self, model_path):
+    def __init__(self, model_path, n_ctx=0):
         super().__init__()
+
+        # warn that installed python should 
+        # support metal GPU acceleration on Apple Silicon Mac
+        print("Warning: Llama2 requires a metal GPU acceleration on Apple Silicon Mac")
     
         # Additional initialization code for Llama
         self.is_api = False
 
         self.model_path = model_path
+        self.n_ctx = n_ctx
         self.prepare()
 
     
@@ -91,14 +96,14 @@ class Llama2(LLMInterface):
         self.model = None
 
         
-    def generate_text(self, prompt, max_length=0):
+    def generate_text(self, prompt):
 
         # if model is not initialized yet, initialize it
         if not self.model:
             self.load_model(self.model_path)
 
         # prepare request for Llama
-        output = self.model(prompt, n_ctx=max_length)
+        output = self.model(prompt)
 
         # return response
         return output["choices"][0]["text"]
@@ -110,7 +115,7 @@ class Llama2(LLMInterface):
         except ImportError:
             raise ImportError("llama_cpp import failed, please check your installation")
 
-        self.model = Llama(model_path)    
+        self.model = Llama(model_path=self.model_path, n_ctx=self.n_ctx)    
 
     def save_model(self, save_path):
         raise NotImplementedError("save_model method is not implemented in Llama class")

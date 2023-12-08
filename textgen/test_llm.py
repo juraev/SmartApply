@@ -29,14 +29,12 @@ class TestChatGPT(unittest.TestCase):
 
 class TestLlama2(unittest.TestCase):
     def setUp(self):
-        self.llama = Llama2("weights/llama-2-7b.bin")
+        self.llama = Llama2("weights/llama-2-7b-chat.Q8_0.gguf")
 
     def test_generate_text(self):
         prompt = "Hello, how are you?"
-        max_length = 100
-        response = self.llama.generate_text(prompt, max_length)
+        response = self.llama.generate_text(prompt)
         self.assertIsInstance(response, str)
-        self.assertLessEqual(len(response), max_length)
 
     def test_load_model(self):
         self.llama.load_model("model_path")
