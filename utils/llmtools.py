@@ -26,13 +26,13 @@ class LLMInterface(ABC):
 
 
 
-GPT_3_5_TURBO = "gpt-3.5-turbo-1106"
+GPT_3_5_TURBO = "gpt-3.5-turbo-16k"
 GPT_4_5_TURBO = "gpt-4-1106-preview"
 
 
 
 class ChatGPT(LLMInterface):
-    def __init__(self, model_name=GPT_3_5_TURBO):
+    def __init__(self, model_name=GPT_4_5_TURBO):
         super().__init__()
 
         # Additional initialization code for ChatGPT

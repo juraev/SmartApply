@@ -28,13 +28,3 @@ def extract_job_description(url, llm):
 
     except Exception as e:
         return f"An error occurred while retrieving the job data: {e}", False
-
-
-# if __name__ == "__main__":
-#     from utils.llmtools import ChatGPT, GPT_4_5_TURBO, GPT_3_5_TURBO
-
-#     chatgpt = ChatGPT(GPT_3_5_TURBO)
-    
-#     url = "https://boards.eu.greenhouse.io/mariadbplc/jobs/4226790101"
-#     chatgpt = ChatGPT(GPT_4_5_TURBO)
-#     print(extract_job_description(url))

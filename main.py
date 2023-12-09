@@ -39,7 +39,7 @@ def generate_cover_letter_chatgpt(job_description, resume_text, resume_file, pro
     else:
         resume = resume_text
     
-    chatgpt = ChatGPT(GPT_4_5_TURBO)
+    chatgpt = ChatGPT()
     
     # check if the job description is url
     # making a simple test for now
@@ -48,17 +48,20 @@ def generate_cover_letter_chatgpt(job_description, resume_text, resume_file, pro
 
         if not success:
             return job_description
-
+    
     # prepare the messages for the chatbot and generate the cover letter
     prompt = chatptg_cover_letter_prompt(resume, job_description, suggested_prompt=prompt)
     response = chatgpt.generate_text(prompt)
     
-    cover_letter_args_json = response.choices[0]\
-        .message.tool_calls[0].function.arguments
-    
-    cover_letter = json.loads(cover_letter_args_json)["cover_letter"]
-    
-    return cover_letter
+    try :
+        cover_letter_args_json = response.choices[0]\
+            .message.tool_calls[0].function.arguments
+        
+        cover_letter = json.loads(cover_letter_args_json)["cover_letter"]
+        
+        return cover_letter
+    except Exception as e:
+        return f"An error occurred while generating the cover letter: {e}"
 
 
 
