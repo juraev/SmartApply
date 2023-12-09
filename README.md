@@ -13,7 +13,7 @@ This Gradio app is designed to automatically generate a tailored cover letter ba
 
 
 ## How to Use
-1. **Start the App**: Run the app by executing `python app.py` in your terminal.
+1. **Start the App**: Run the app by executing `python main.py` in your terminal.
 2. **Upload Resume**: Paste your resume or click the 'Upload Resume' button and select your resume file.
 3. **Input Job Description**: Paste the job description into the text box or paste to the job posting url.
 4. **Generate**: Click on 'Generate Cover Letter' to process your inputs.
@@ -24,7 +24,7 @@ This Gradio app is designed to automatically generate a tailored cover letter ba
 To set up this Gradio app on your local machine, follow these steps:
 1. Clone this repository: `git clone [repository-link]`.
 2. Install requirements: `pip install -r requirements.txt`.
-3. Run the app: `python app.py`.
+3. Run the app: `python main.py`.
 
 
 ## Technologies Used
