@@ -1,5 +1,5 @@
 import unittest
-from textgen.llm import ChatGPT, Llama2
+from utils.llmtools import ChatGPT, Llama2
 
 class TestChatGPT(unittest.TestCase):
     def setUp(self):

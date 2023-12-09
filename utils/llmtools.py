@@ -53,7 +53,7 @@ class ChatGPT(LLMInterface):
 
         # prepare request for OpenAI API
 
-        prompt["temperature"] = 0.3
+        prompt["temperature"] = 0.2
 
         # send request to OpenAI API
         response = self.client.chat.completions.create(**prompt, model=self.model_name)
