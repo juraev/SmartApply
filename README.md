@@ -24,7 +24,8 @@ This Gradio app is designed to automatically generate a tailored cover letter ba
 To set up this Gradio app on your local machine, follow these steps:
 1. Clone this repository: `git clone [repository-link]`.
 2. Install requirements: `pip install -r requirements.txt`.
-3. Run the app: `python app.py`.
+3. Add your own API key as an environment variable: `export OPENAI_API_KEY=your-api-key`.
+4. Run the app: `python app.py`.
 
 
 ## Technologies Used

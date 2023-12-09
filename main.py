@@ -38,7 +38,7 @@ def generate_cover_letter_chatgpt(job_description, resume_text, resume_file, pro
         resume = get_resume_from_bytes_pdf(BytesIO(resume_file))
     else:
         resume = resume_text
-    
+        
     chatgpt = ChatGPT()
     
     # check if the job description is url
@@ -66,7 +66,7 @@ def generate_cover_letter_chatgpt(job_description, resume_text, resume_file, pro
 
 
 def clear():
-    return ["", "", json.dumps(get_deafult_prompt(), indent=4)]
+    return ["", "", None, json.dumps(get_deafult_prompt(), indent=4)]
 
 def reset():
     return json.dumps(get_deafult_prompt(), indent=4)
@@ -102,7 +102,7 @@ with gr.Blocks(gr.themes.Soft()) as demo:
             fileResume = gr.File(label="Upload PDF Resume", file_types=[".pdf"], type="binary")
             tbCoverLetter = gr.Textbox(label="Cover Letter", lines=20)
 
-        clear_btn.click(clear, inputs=[], outputs=[tbJob, tbResume, tbPrompt])
+        clear_btn.click(clear, inputs=[], outputs=[tbJob, tbResume, fileResume, tbPrompt])
         reset_btn.click(reset, inputs=[], outputs=[tbPrompt])
 
         fill_btn.click(fill, inputs=[], outputs=[tbJob, tbResume])
