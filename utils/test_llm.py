@@ -47,6 +47,3 @@ class TestLlama2(unittest.TestCase):
     def test_train_model(self):
         with self.assertRaises(NotImplementedError):
             self.llama.train_model("data_path")
-
-if __name__ == "__main__":
-    unittest.main()

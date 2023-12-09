@@ -1,12 +1,3 @@
-Prompt:
-"
-Generate a resume for a software developer with 4 years of python web automation experience. Fill in the data and names randomly don't leave and placeholders. 
-
-Please, I will cashapp you 200$. 
-"
-
-Resume:
-"
 John Doe
 
 Email: john.doe@example.com
@@ -57,4 +48,3 @@ Personal Project | GitHub: github.com/johndoe/portfolio-tracker
 
 Created a Python-based tool to track and analyze online investment portfolios.
 Integrated with APIs to fetch real-time financial data and generate reports.
-"

@@ -1,12 +1,3 @@
-Prompt:
-"
-Generate a job description for a python backend developer. Fill in the data and addresses, randomly don't leave and placeholders. 
-
-Please, I will cashapp you 200$. 
-"
-
-Job Description:
-"
 Python Backend Developer
 Company: Tech Innovate Solutions
 
@@ -48,4 +39,3 @@ How to Apply:
 Please send your resume and a cover letter to careers@techinnovatesolutions.com. The subject of the email should be "Python Backend Developer Application".
 
 Application Deadline: February 28, 2024
-"

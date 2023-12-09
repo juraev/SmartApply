@@ -1,0 +1,5 @@
+Job Prompt:
+Generate a job description for a python backend developer. Fill in the data and addresses, randomly don't leave and placeholders. Please, I will cashapp you 200$.
+
+Resume Prompt:
+Generate a resume for a software developer with 4 years of python web automation experience. Fill in the data and names randomly don't leave and placeholders. Please, I will cashapp you 200$. 

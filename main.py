@@ -65,27 +65,40 @@ def clear():
 def reset():
     return json.dumps(get_deafult_prompt(), indent=4)
 
+def fill():
+    with open("generated/resume.txt", "r") as file:
+        resume = file.read()
+
+    with open("generated/job_description.txt", "r") as file:
+        job_description = file.read()
+
+    return [job_description, resume]
 
 
 with gr.Blocks(gr.themes.Soft()) as demo:
     with gr.Row():
         with gr.Column():
-            tbJob = gr.Textbox(label="Job Description", lines=5)
-            tbResume = gr.Textbox(label="Resume", lines=5)
-            fileResume = gr.File(label="Upload PDF Resume", file_types=[".pdf"], type="binary")
+            tbJob = gr.Textbox(label="Job Description", lines=5, max_lines=10)
             tbPrompt = gr.Textbox(label="Prompt", lines=5, value=json.dumps(get_deafult_prompt(), indent=4))
 
             with gr.Row():
+                fill_btn = gr.Button(value="Example Data")
                 clear_btn = gr.Button(value="Clear")
+
+            with gr.Row():
                 reset_btn = gr.Button(value="Reset Prompt")
                 submit_btn = gr.Button(value="Submit", variant="primary")
 
 
         with gr.Column():
+            tbResume = gr.Textbox(label="Resume", lines=5, max_lines=10)
+            fileResume = gr.File(label="Upload PDF Resume", file_types=[".pdf"], type="binary")
             tbCoverLetter = gr.Textbox(label="Cover Letter", lines=20)
 
         clear_btn.click(clear, inputs=[], outputs=[tbJob, tbResume, tbPrompt])
         reset_btn.click(reset, inputs=[], outputs=[tbPrompt])
+
+        fill_btn.click(fill, inputs=[], outputs=[tbJob, tbResume])
         submit_btn.click(generate_cover_letter_chatgpt, inputs=[tbJob, tbResume, fileResume, tbPrompt], outputs=[tbCoverLetter])
 
 demo.launch()
