@@ -28,7 +28,7 @@ To set up this Gradio app on your local machine, follow these steps:
 
 
 ## Technologies Used
-- **Python**: Primary programming language.
+- **Python**: Primary programming language. (Metal GPU supporing python if used in Apple Silicon Macs with local llama2).
 - **Gradio**: For creating the web interface.
 - **PyPDF**: For parsing PDF files.
 

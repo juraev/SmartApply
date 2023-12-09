@@ -76,6 +76,7 @@ def fill():
 
 
 with gr.Blocks(gr.themes.Soft()) as demo:
+    gr.Markdown("# Smart Apply")
     with gr.Row():
         with gr.Column():
             tbJob = gr.Textbox(label="Job Description", lines=5, max_lines=10)
