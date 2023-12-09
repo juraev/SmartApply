@@ -7,7 +7,7 @@ This Gradio app is designed to automatically generate a tailored cover letter ba
 
 ## Features
 - **Input Resume**: Upload your resume in a text or PDF format.
-- **Input Job Description**: Paste the job description or (yet to come) a URL to the job posting.
+- **Input Job Description**: Paste the job description or a URL to the job posting.
 - **Modify LLM prompt**: Modify the LLM prompt to customize the generated cover letter.
 - **Generate Cover Letter**: Automatically creates a cover letter that aligns your skills and experiences with the job requirements.
 
