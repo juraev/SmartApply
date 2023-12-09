@@ -58,3 +58,42 @@ def chatptg_cover_letter_prompt(resume, job_description, suggested_prompt=None):
     }
 
     return prompt
+
+
+
+def get_job_extraction_prompt(text):
+    messages = [
+        {
+            "role": "system",
+            "content": '''Please, Extract and post the job description from the text the user provided.'''
+        }, 
+        {
+            "role": "user",
+            "content": text
+        }
+    ]
+
+    prompt = {
+        "messages": messages,
+        "tools": [
+            {
+                "type": "function",
+                "function":{
+                    "name": "post_job",
+                    "description": "Post the given job.",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "job":{
+                                "type": "string",
+                                "description": "The text to extract the job description from."
+                            }
+                        }
+                    }
+                }
+            }
+        ],
+        "tool_choice": "auto"
+    }
+
+    return prompt

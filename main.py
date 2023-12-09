@@ -6,6 +6,7 @@ import gradio as gr
 from utils.llmtools import ChatGPT, GPT_4_5_TURBO, GPT_3_5_TURBO
 from utils.prompts import chatptg_cover_letter_prompt, get_deafult_prompt
 from utils.pdftools import get_resume_from_bytes_pdf
+from utils.urltools import extract_job_description
 
 
 def generate_cover_letter_chatgpt(job_description, resume_text, resume_file, prompt):
@@ -38,13 +39,15 @@ def generate_cover_letter_chatgpt(job_description, resume_text, resume_file, pro
     else:
         resume = resume_text
     
-    
-    # # check if the job description is url
-    # # making a simple test for now
-    # if job_description.startswith("http"):
-    #     job_description = read_job_from_url(job_description)
-
     chatgpt = ChatGPT(GPT_4_5_TURBO)
+    
+    # check if the job description is url
+    # making a simple test for now
+    if job_description.startswith("http"):
+        job_description, success = extract_job_description(job_description, chatgpt)
+
+        if not success:
+            return job_description
 
     # prepare the messages for the chatbot and generate the cover letter
     prompt = chatptg_cover_letter_prompt(resume, job_description, suggested_prompt=prompt)
