@@ -87,7 +87,7 @@ with gr.Blocks(gr.themes.Soft()) as demo:
 
             with gr.Row():
                 reset_btn = gr.Button(value="Reset Prompt")
-                submit_btn = gr.Button(value="Submit", variant="primary")
+                submit_btn = gr.Button(value="Generate Cover Letter", variant="primary")
 
 
         with gr.Column():
