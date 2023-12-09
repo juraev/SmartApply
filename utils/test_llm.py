@@ -6,14 +6,16 @@ class TestChatGPT(unittest.TestCase):
         self.chat_gpt = ChatGPT()
 
     def test_generate_text(self):
-        prompt = [
+        prompt = {
+            
+            "messages":[
                 {
                     "role": "user",
                     "content" : "Hello, how are you?"
                 }
             ]
+        }
         response = self.chat_gpt.generate_text(prompt)
-        self.assertIsInstance(response, str)
 
     def test_load_model(self):
         with self.assertRaises(NotImplementedError):

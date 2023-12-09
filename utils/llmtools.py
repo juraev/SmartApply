@@ -74,7 +74,7 @@ class ChatGPT(LLMInterface):
 
 
 class Llama2(LLMInterface):
-    def __init__(self, model_path, n_ctx=0):
+    def __init__(self, model_path):
         super().__init__()
 
         # warn that installed python should 
@@ -85,7 +85,6 @@ class Llama2(LLMInterface):
         self.is_api = False
 
         self.model_path = model_path
-        self.n_ctx = n_ctx
         self.prepare()
 
     
@@ -113,7 +112,7 @@ class Llama2(LLMInterface):
         except ImportError:
             raise ImportError("llama_cpp import failed, please check your installation")
 
-        self.model = Llama(model_path=self.model_path, n_ctx=self.n_ctx)    
+        self.model = Llama(model_path=self.model_path, n_ctx=4096)    
 
     def save_model(self, save_path):
         raise NotImplementedError("save_model method is not implemented in Llama class")
