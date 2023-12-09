@@ -1,4 +1,5 @@
 import gradio as gr
+import json
 
 from textgen.llm import ChatGPT
 
@@ -11,7 +12,7 @@ def generate_cover_letter(resume, job_description):
         {
             "role": "system",
             "content": '''Users gives a resume and a job description. 
-                    Create a cover letter for the job description based on the resume.'''
+                    Create a cover letter for the job description based on the resume and save it.'''
         }, 
         {
             "role": "user",
@@ -27,9 +28,37 @@ def generate_cover_letter(resume, job_description):
         }
     ]
 
+    prompt = {
+        "messages": messages,
+        "tools": [
+            {
+                "type": "function",
+                "function":{
+                    "name": "save_cover_letter",
+                    "description": "Save the given cover letter.",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "cover_letter":{
+                                "type": "string",
+                                "description": "The cover letter to save."
+                            }
+                        }
+                    }
+                }
+            }
+        ],
+        "tool_choice": "auto"
+    }
 
-    generated_text = f"Input 1: {resume}\nInput 2: {job_description}"
-    return generated_text
+    response = chatgpt.generate_text(prompt)
+    
+    cover_letter_args_json = response.choices[0]\
+        .message.tool_calls[0].function.arguments
+    
+    cover_letter = json.loads(cover_letter_args_json)["cover_letter"]
+    
+    return cover_letter
 
 inputs = [
     

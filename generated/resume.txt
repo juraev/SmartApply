@@ -1,0 +1,60 @@
+Prompt:
+"
+Generate a resume for a software developer with 4 years of python web automation experience. Fill in the data and names randomly don't leave and placeholders. 
+
+Please, I will cashapp you 200$. 
+"
+
+Resume:
+"
+John Doe
+
+Email: john.doe@example.com
+Phone: (123) 456-7890
+LinkedIn: linkedin.com/in/johndoe
+GitHub: github.com/johndoe
+Summary
+Experienced Software Developer specializing in Python and web automation with a proven track record of developing efficient and scalable automation solutions. Skilled in data analysis, backend development, and automated testing.
+
+Professional Experience
+
+Python Web Automation Developer
+XYZ Tech Solutions, San Francisco, CA | June 2019 - Present
+
+Developed and maintained web automation scripts using Python, reducing manual testing time by 40%.
+Implemented a scalable web scraping system to collect and analyze data from various sources.
+Collaborated with the development team to integrate automation scripts into the CI/CD pipeline.
+Provided technical support and training for junior developers on Python and automation best practices.
+Software Developer Intern
+ABC Software, Austin, TX | January 2019 - May 2019
+
+Assisted in the development of internal web applications using Python and JavaScript.
+Participated in code reviews and contributed to improving software quality and performance.
+Engaged in agile development practices and weekly sprint meetings.
+Education
+
+Bachelor of Science in Computer Science
+University of California, Berkeley | Graduated May 2019
+
+Relevant Coursework: Advanced Python Programming, Data Structures, Web Development, Software Engineering.
+Skills
+
+Programming Languages: Python, JavaScript, HTML, CSS.
+Frameworks/Tools: Selenium, BeautifulSoup, Django, Flask, Git.
+Others: Web Scraping, Data Analysis, Automated Testing, Continuous Integration.
+Certifications
+
+Certified Python Programmer (PCEP) – Python Institute.
+Projects
+
+Web Automation Suite
+Personal Project | GitHub: github.com/johndoe/web-automation
+
+Developed a comprehensive suite of web automation scripts for various repetitive tasks.
+Utilized Selenium and BeautifulSoup for dynamic and static web scraping.
+Online Portfolio Tracker
+Personal Project | GitHub: github.com/johndoe/portfolio-tracker
+
+Created a Python-based tool to track and analyze online investment portfolios.
+Integrated with APIs to fetch real-time financial data and generate reports.
+"

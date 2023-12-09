@@ -1,0 +1,51 @@
+Prompt:
+"
+Generate a job description for a python backend developer. Fill in the data and addresses, randomly don't leave and placeholders. 
+
+Please, I will cashapp you 200$. 
+"
+
+Job Description:
+"
+Python Backend Developer
+Company: Tech Innovate Solutions
+
+Location: 4520 Innovation Drive, Austin, TX 78744, USA
+
+Job Type: Full-Time
+
+Salary: $85,000 - $120,000 per year
+
+Benefits:
+
+Health, dental, and vision insurance
+401(k) plan with company matching
+Generous vacation and paid time off
+Flexible working hours
+On-site gym and wellness programs
+Continuous learning and development opportunities
+Responsibilities:
+
+Develop and maintain robust backend systems using Python.
+Implement and oversee APIs for front-end communication.
+Collaborate with front-end developers to integrate user-facing elements with server-side logic.
+Optimize applications for maximum speed and scalability.
+Design and implement data storage solutions (SQL and NoSQL databases).
+Ensure security and data protection measures are consistently applied.
+Participate in code reviews and contribute to team knowledge sharing.
+Stay informed of emerging technologies/industry trends and apply them into operations and activities.
+Qualifications:
+
+Bachelor's degree in Computer Science, Engineering, or related field.
+At least 3 years of experience in Python backend development.
+Proficiency in Python frameworks (e.g., Django, Flask).
+Familiarity with front-end technologies (e.g., JavaScript, HTML5, CSS).
+Understanding of server-side templating languages (e.g., Jinja 2, Mako).
+Experience with cloud services (e.g., AWS, Azure) and containerization technologies (e.g., Docker).
+Knowledge of user authentication and authorization between multiple systems, servers, and environments.
+Ability to implement automated testing platforms and unit tests.
+How to Apply:
+Please send your resume and a cover letter to careers@techinnovatesolutions.com. The subject of the email should be "Python Backend Developer Application".
+
+Application Deadline: February 28, 2024
+"

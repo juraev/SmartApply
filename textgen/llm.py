@@ -52,16 +52,14 @@ class ChatGPT(LLMInterface):
     def generate_text(self, prompt):
 
         # prepare request for OpenAI API
-        request = {
-            "messages": prompt,
-            "temperature": 0.7
-        }
+
+        prompt["temperature"] = 0.3
 
         # send request to OpenAI API
-        response = self.client.chat.completions.create(**request, model=self.model_name)
+        response = self.client.chat.completions.create(**prompt, model=self.model_name)
 
         # return response
-        return response.choices[0].message.content
+        return response
     
 
     def load_model(self, model_path):
